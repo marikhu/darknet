@@ -1,0 +1,14 @@
+python plot_yolo_log.py nohup.out
+
+# nohup.out log of training, takes the values of loss 
+236020: 0.039012, 0.037074 avg, 0.003000 rate, 2.418917 seconds, 45315840 images
+
+avg is the average loss
+rate is the learning rate
+
+
+https://towardsdatascience.com/calculating-loss-of-yolo-v3-layer-8878bfaaf1ff
+
+https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects
+
+https://towardsdatascience.com/yolo-v3-object-detection-53fb7d3bfe6b
