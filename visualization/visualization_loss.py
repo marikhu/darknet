@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 #%matplotlib inline
  
 lines =500
-result = pd.read_csv('log_loss.txt',error_bad_lines=False, names=['loss', 'avg', 'rate', 'seconds', 'images','hours'])
+#result = pd.read_csv('log_loss.txt',error_bad_lines=False, names=['loss', 'avg', 'rate', 'seconds', 'images','hours'])
+result = pd.read_csv('log_loss-2.txt',error_bad_lines=False, names=['loss', 'avg', 'rate', 'seconds', 'images','hours'])
 result.head()
  
 result['loss']=result['loss'].str.split(' ').str.get(1)
@@ -26,4 +27,5 @@ ax.plot(result['avg'].values,label='avg_loss')
 ax.legend(loc='best')
 ax.set_title('The loss curves')
 ax.set_xlabel('batches')
-fig.savefig('avg_loss')
+#fig.savefig('avg_loss')
+fig.savefig('avg_loss-2')

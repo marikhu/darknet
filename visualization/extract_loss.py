@@ -34,6 +34,8 @@ def extract_log(log_file, new_log_file, key_word):
 
  
 
-extract_log('nohup.out.2', 'log_loss.txt', 'images')
+#extract_log('nohup.out.2', 'log_loss.txt', 'images')
+extract_log('nohup.out', 'log_loss-2.txt', 'images')
 
-extract_log('nohup.out.2', 'log_iou.txt', 'IOU')
+#extract_log('nohup.out.2', 'log_iou.txt', 'IOU')
+extract_log('nohup.out', 'log_iou-2.txt', 'IOU')
