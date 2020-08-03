@@ -1,0 +1,326 @@
+ GPU isn't used 
+ Used AVX 
+ Used FMA & AVX2 
+ OpenCV version: 4.13.6
+valid: Using default '/marikhu/YOLOv4/darknet/VehicleDetect-Yolo-Rama4-Set2-train.txt'
+   layer   filters  size/strd(dil)      input                output
+   0 conv     32       3 x 3/ 1    416 x 416 x   3 ->  416 x 416 x  32 0.299 BF
+   1 conv     64       3 x 3/ 2    416 x 416 x  32 ->  208 x 208 x  64 1.595 BF
+   2 conv     32       1 x 1/ 1    208 x 208 x  64 ->  208 x 208 x  32 0.177 BF
+   3 conv     64       3 x 3/ 1    208 x 208 x  32 ->  208 x 208 x  64 1.595 BF
+   4 Shortcut Layer: 1,  wt = 0, wn = 0, outputs: 208 x 208 x  64 0.003 BF
+   5 conv    128       3 x 3/ 2    208 x 208 x  64 ->  104 x 104 x 128 1.595 BF
+   6 conv     64       1 x 1/ 1    104 x 104 x 128 ->  104 x 104 x  64 0.177 BF
+   7 conv    128       3 x 3/ 1    104 x 104 x  64 ->  104 x 104 x 128 1.595 BF
+   8 Shortcut Layer: 5,  wt = 0, wn = 0, outputs: 104 x 104 x 128 0.001 BF
+   9 conv     64       1 x 1/ 1    104 x 104 x 128 ->  104 x 104 x  64 0.177 BF
+  10 conv    128       3 x 3/ 1    104 x 104 x  64 ->  104 x 104 x 128 1.595 BF
+  11 Shortcut Layer: 8,  wt = 0, wn = 0, outputs: 104 x 104 x 128 0.001 BF
+  12 conv    256       3 x 3/ 2    104 x 104 x 128 ->   52 x  52 x 256 1.595 BF
+  13 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+  14 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+  15 Shortcut Layer: 12,  wt = 0, wn = 0, outputs:  52 x  52 x 256 0.001 BF
+  16 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+  17 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+  18 Shortcut Layer: 15,  wt = 0, wn = 0, outputs:  52 x  52 x 256 0.001 BF
+  19 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+  20 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+  21 Shortcut Layer: 18,  wt = 0, wn = 0, outputs:  52 x  52 x 256 0.001 BF
+  22 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+  23 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+  24 Shortcut Layer: 21,  wt = 0, wn = 0, outputs:  52 x  52 x 256 0.001 BF
+  25 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+  26 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+  27 Shortcut Layer: 24,  wt = 0, wn = 0, outputs:  52 x  52 x 256 0.001 BF
+  28 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+  29 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+  30 Shortcut Layer: 27,  wt = 0, wn = 0, outputs:  52 x  52 x 256 0.001 BF
+  31 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+  32 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+  33 Shortcut Layer: 30,  wt = 0, wn = 0, outputs:  52 x  52 x 256 0.001 BF
+  34 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+  35 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+  36 Shortcut Layer: 33,  wt = 0, wn = 0, outputs:  52 x  52 x 256 0.001 BF
+  37 conv    512       3 x 3/ 2     52 x  52 x 256 ->   26 x  26 x 512 1.595 BF
+  38 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  39 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  40 Shortcut Layer: 37,  wt = 0, wn = 0, outputs:  26 x  26 x 512 0.000 BF
+  41 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  42 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  43 Shortcut Layer: 40,  wt = 0, wn = 0, outputs:  26 x  26 x 512 0.000 BF
+  44 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  45 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  46 Shortcut Layer: 43,  wt = 0, wn = 0, outputs:  26 x  26 x 512 0.000 BF
+  47 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  48 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  49 Shortcut Layer: 46,  wt = 0, wn = 0, outputs:  26 x  26 x 512 0.000 BF
+  50 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  51 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  52 Shortcut Layer: 49,  wt = 0, wn = 0, outputs:  26 x  26 x 512 0.000 BF
+  53 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  54 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  55 Shortcut Layer: 52,  wt = 0, wn = 0, outputs:  26 x  26 x 512 0.000 BF
+  56 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  57 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  58 Shortcut Layer: 55,  wt = 0, wn = 0, outputs:  26 x  26 x 512 0.000 BF
+  59 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  60 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  61 Shortcut Layer: 58,  wt = 0, wn = 0, outputs:  26 x  26 x 512 0.000 BF
+  62 conv   1024       3 x 3/ 2     26 x  26 x 512 ->   13 x  13 x1024 1.595 BF
+  63 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+  64 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+  65 Shortcut Layer: 62,  wt = 0, wn = 0, outputs:  13 x  13 x1024 0.000 BF
+  66 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+  67 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+  68 Shortcut Layer: 65,  wt = 0, wn = 0, outputs:  13 x  13 x1024 0.000 BF
+  69 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+  70 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+  71 Shortcut Layer: 68,  wt = 0, wn = 0, outputs:  13 x  13 x1024 0.000 BF
+  72 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+  73 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+  74 Shortcut Layer: 71,  wt = 0, wn = 0, outputs:  13 x  13 x1024 0.000 BF
+  75 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+  76 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+  77 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+  78 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+  79 conv    512       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x 512 0.177 BF
+  80 conv   1024       3 x 3/ 1     13 x  13 x 512 ->   13 x  13 x1024 1.595 BF
+  81 conv     21       1 x 1/ 1     13 x  13 x1024 ->   13 x  13 x  21 0.007 BF
+  82 yolo
+[yolo] params: iou loss: mse (2), iou_norm: 0.75, cls_norm: 1.00, scale_x_y: 1.00
+  83 route  79 		                           ->   13 x  13 x 512 
+  84 conv    256       1 x 1/ 1     13 x  13 x 512 ->   13 x  13 x 256 0.044 BF
+  85 upsample                 2x    13 x  13 x 256 ->   26 x  26 x 256
+  86 route  85 61 	                           ->   26 x  26 x 768 
+  87 conv    256       1 x 1/ 1     26 x  26 x 768 ->   26 x  26 x 256 0.266 BF
+  88 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  89 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  90 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  91 conv    256       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x 256 0.177 BF
+  92 conv    512       3 x 3/ 1     26 x  26 x 256 ->   26 x  26 x 512 1.595 BF
+  93 conv     21       1 x 1/ 1     26 x  26 x 512 ->   26 x  26 x  21 0.015 BF
+  94 yolo
+[yolo] params: iou loss: mse (2), iou_norm: 0.75, cls_norm: 1.00, scale_x_y: 1.00
+  95 route  91 		                           ->   26 x  26 x 256 
+  96 conv    128       1 x 1/ 1     26 x  26 x 256 ->   26 x  26 x 128 0.044 BF
+  97 upsample                 2x    26 x  26 x 128 ->   52 x  52 x 128
+  98 route  97 36 	                           ->   52 x  52 x 384 
+  99 conv    128       1 x 1/ 1     52 x  52 x 384 ->   52 x  52 x 128 0.266 BF
+ 100 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+ 101 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+ 102 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+ 103 conv    128       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x 128 0.177 BF
+ 104 conv    256       3 x 3/ 1     52 x  52 x 128 ->   52 x  52 x 256 1.595 BF
+ 105 conv     21       1 x 1/ 1     52 x  52 x 256 ->   52 x  52 x  21 0.029 BF
+ 106 yolo
+[yolo] params: iou loss: mse (2), iou_norm: 0.75, cls_norm: 1.00, scale_x_y: 1.00
+Total BFLOPS 65.312 
+avg_outputs = 516922 
+Loading weights from yolov4.conv.137...0
+VehicleDetect-Yolo-Rama4-Set2
+mini_batch = 4, batch = 64, time_steps = 1, train = 1 
+Done! Loaded 76 layers from weights-file 
+ Create 6 permanent cpu-threads 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.527174, GIOU: 0.488766), Class: 0.547388, Obj: 0.571110, No Obj: 0.502206, .5R: 0.600000, .75R: 0.000000, count: 5, class_loss = 286.630402, iou_loss = 1.386261, total_loss = 288.016663 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.402868, GIOU: 0.402868), Class: 0.463584, Obj: 0.388986, No Obj: 0.509713, .5R: 0.333333, .75R: 0.000000, count: 3, class_loss = 1169.822144, iou_loss = 1.388184, total_loss = 1171.210327 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500014, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4483.091797, iou_loss = 0.000000, total_loss = 4483.091797 
+ total_bbox = 8, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.472069, GIOU: 0.458828), Class: 0.521395, Obj: 0.496751, No Obj: 0.503354, .5R: 0.500000, .75R: 0.125000, count: 8, class_loss = 291.411926, iou_loss = 3.232391, total_loss = 294.644318 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.363214, GIOU: 0.363214), Class: 0.467585, Obj: 0.735571, No Obj: 0.507699, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1173.563232, iou_loss = 0.413818, total_loss = 1173.977051 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501876, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4540.808594, iou_loss = 0.000000, total_loss = 4540.808594 
+ total_bbox = 17, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.344373, GIOU: 0.210860), Class: 0.568413, Obj: 0.542389, No Obj: 0.504148, .5R: 0.222222, .75R: 0.000000, count: 9, class_loss = 291.397705, iou_loss = 10.857574, total_loss = 302.255280 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.492539, GIOU: 0.440241), Class: 0.636968, Obj: 0.726468, No Obj: 0.510186, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1184.710815, iou_loss = 0.200562, total_loss = 1184.911377 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501563, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4527.719238, iou_loss = 0.000000, total_loss = 4527.719238 
+ total_bbox = 27, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.447594, GIOU: 0.386752), Class: 0.523141, Obj: 0.571020, No Obj: 0.501406, .5R: 0.428571, .75R: 0.142857, count: 7, class_loss = 287.289673, iou_loss = 10.546173, total_loss = 297.835846 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.149336, GIOU: 0.149336), Class: 0.585077, Obj: 0.644446, No Obj: 0.508893, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1169.166748, iou_loss = 1.193604, total_loss = 1170.360352 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.498878, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4459.115723, iou_loss = 0.000000, total_loss = 4459.115723 
+ total_bbox = 35, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.337004, GIOU: 0.324129), Class: 0.446195, Obj: 0.592346, No Obj: 0.504081, .5R: 0.400000, .75R: 0.000000, count: 5, class_loss = 290.811951, iou_loss = 7.044952, total_loss = 297.856903 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.316606, GIOU: 0.316605), Class: 0.589479, Obj: 0.496899, No Obj: 0.509854, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1178.396851, iou_loss = 0.612915, total_loss = 1179.009766 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500904, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4520.918945, iou_loss = 0.000000, total_loss = 4520.918945 
+ total_bbox = 41, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.512749, GIOU: 0.465059), Class: 0.562745, Obj: 0.532681, No Obj: 0.502394, .5R: 0.750000, .75R: 0.000000, count: 8, class_loss = 286.648224, iou_loss = 6.021545, total_loss = 292.669769 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.149629, GIOU: -0.123159), Class: 0.372064, Obj: 0.575682, No Obj: 0.508286, .5R: 0.000000, .75R: 0.000000, count: 2, class_loss = 1165.009277, iou_loss = 3.152588, total_loss = 1168.161865 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.499153, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4466.846680, iou_loss = 0.000000, total_loss = 4466.846680 
+ total_bbox = 51, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.407557, GIOU: 0.363593), Class: 0.539241, Obj: 0.656963, No Obj: 0.503532, .5R: 0.333333, .75R: 0.000000, count: 6, class_loss = 287.782288, iou_loss = 5.440491, total_loss = 293.222778 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.497128, GIOU: 0.460387), Class: 0.598011, Obj: 0.510475, No Obj: 0.509362, .5R: 0.833333, .75R: 0.000000, count: 6, class_loss = 1171.853516, iou_loss = 5.283447, total_loss = 1177.136963 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.499175, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4474.650879, iou_loss = 0.000000, total_loss = 4474.650879 
+ total_bbox = 63, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.562935, GIOU: 0.517071), Class: 0.488288, Obj: 0.483801, No Obj: 0.504387, .5R: 0.750000, .75R: 0.250000, count: 8, class_loss = 290.949493, iou_loss = 10.170380, total_loss = 301.119873 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.388273, GIOU: 0.171266), Class: 0.590996, Obj: 0.515421, No Obj: 0.510030, .5R: 0.500000, .75R: 0.000000, count: 2, class_loss = 1178.110840, iou_loss = 1.502075, total_loss = 1179.612915 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501586, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4524.390137, iou_loss = 0.000000, total_loss = 4524.390137 
+ total_bbox = 73, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.525988, GIOU: 0.383263), Class: 0.434686, Obj: 0.601740, No Obj: 0.501482, .5R: 0.800000, .75R: 0.000000, count: 5, class_loss = 285.468231, iou_loss = 5.726105, total_loss = 291.194336 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.610654, GIOU: 0.610654), Class: 0.480218, Obj: 0.398440, No Obj: 0.509215, .5R: 1.000000, .75R: 0.000000, count: 1, class_loss = 1170.099121, iou_loss = 0.123657, total_loss = 1170.222778 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500621, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4487.075195, iou_loss = 0.000000, total_loss = 4487.075195 
+ total_bbox = 79, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.374905, GIOU: 0.353380), Class: 0.601095, Obj: 0.504078, No Obj: 0.504059, .5R: 0.333333, .75R: 0.000000, count: 3, class_loss = 289.222351, iou_loss = 1.324554, total_loss = 290.546906 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.539615, GIOU: 0.535499), Class: 0.561966, Obj: 0.449551, No Obj: 0.508854, .5R: 0.500000, .75R: 0.000000, count: 4, class_loss = 1169.656738, iou_loss = 1.000366, total_loss = 1170.657104 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500933, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4500.954102, iou_loss = 0.000000, total_loss = 4500.954102 
+ total_bbox = 86, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.436780, GIOU: 0.405503), Class: 0.435103, Obj: 0.551220, No Obj: 0.504332, .5R: 0.600000, .75R: 0.000000, count: 5, class_loss = 289.553253, iou_loss = 4.324677, total_loss = 293.877930 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.213117, GIOU: 0.213117), Class: 0.472889, Obj: 0.642323, No Obj: 0.509618, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1172.430542, iou_loss = 1.351440, total_loss = 1173.781982 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500214, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4489.101074, iou_loss = 0.000000, total_loss = 4489.101074 
+ total_bbox = 92, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.494198, GIOU: 0.480912), Class: 0.463358, Obj: 0.618233, No Obj: 0.503199, .5R: 0.800000, .75R: 0.000000, count: 5, class_loss = 287.783600, iou_loss = 1.941101, total_loss = 289.724701 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.556591, GIOU: 0.502699), Class: 0.699719, Obj: 0.521025, No Obj: 0.509028, .5R: 0.666667, .75R: 0.000000, count: 3, class_loss = 1169.482178, iou_loss = 1.037354, total_loss = 1170.519531 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.498641, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4453.739746, iou_loss = 0.000000, total_loss = 4453.739746 
+ total_bbox = 100, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.282856, GIOU: 0.090105), Class: 0.507099, Obj: 0.656664, No Obj: 0.502221, .5R: 0.000000, .75R: 0.000000, count: 4, class_loss = 288.814819, iou_loss = 4.930359, total_loss = 293.745178 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.382878, GIOU: 0.286599), Class: 0.530419, Obj: 0.414062, No Obj: 0.508468, .5R: 0.000000, .75R: 0.000000, count: 3, class_loss = 1172.802002, iou_loss = 1.156372, total_loss = 1173.958374 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501533, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4522.519531, iou_loss = 0.000000, total_loss = 4522.519531 
+ total_bbox = 107, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.311714, GIOU: 0.184971), Class: 0.592992, Obj: 0.483764, No Obj: 0.506407, .5R: 0.200000, .75R: 0.200000, count: 5, class_loss = 295.937469, iou_loss = 8.484192, total_loss = 304.421661 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.171837, GIOU: 0.171837), Class: 0.183036, Obj: 0.267236, No Obj: 0.509405, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1184.047241, iou_loss = 1.012329, total_loss = 1185.059570 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501552, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4547.516113, iou_loss = 0.000000, total_loss = 4547.516113 
+ total_bbox = 113, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.429380, GIOU: 0.332670), Class: 0.571845, Obj: 0.573468, No Obj: 0.501705, .5R: 0.375000, .75R: 0.000000, count: 8, class_loss = 285.007080, iou_loss = 19.684784, total_loss = 304.691864 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.447854, GIOU: 0.391000), Class: 0.549594, Obj: 0.457799, No Obj: 0.510042, .5R: 0.250000, .75R: 0.000000, count: 4, class_loss = 1170.579102, iou_loss = 1.633789, total_loss = 1172.212891 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.498576, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4445.707520, iou_loss = 0.000000, total_loss = 4445.707520 
+ total_bbox = 125, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.244135, GIOU: 0.003334), Class: 0.736788, Obj: 0.373131, No Obj: 0.503312, .5R: 0.250000, .75R: 0.000000, count: 4, class_loss = 288.311707, iou_loss = 17.390991, total_loss = 305.702698 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.402499, GIOU: 0.269156), Class: 0.562436, Obj: 0.488950, No Obj: 0.508477, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1165.099609, iou_loss = 0.409424, total_loss = 1165.509033 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500338, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4483.772461, iou_loss = 0.000000, total_loss = 4483.772461 
+ total_bbox = 130, rewritten_bbox = 0.000000 % 
+
+ seen 64, trained: 0 K-images (0 Kilo-batches_64) 
+Learning Rate: 0.001, Momentum: 0.9, Decay: 0.0005
+ Detection layer: 82 - type = 27 
+ Detection layer: 94 - type = 27 
+ Detection layer: 106 - type = 27 
+Resizing, random_coef = 1.40 
+
+ 608 x 608 
+Loaded: 0.269708 seconds
+
+ 1: 1988.661499, 1988.661499 avg loss, 0.000000 rate, 390.693741 seconds, 64 images, -1.000000 hours left
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.403937, GIOU: 0.262081), Class: 0.520289, Obj: 0.604041, No Obj: 0.504426, .5R: 0.333333, .75R: 0.000000, count: 6, class_loss = 289.704315, iou_loss = 5.100586, total_loss = 294.804901 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.508570, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1168.753052, iou_loss = 0.000000, total_loss = 1168.753052 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501467, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4508.903320, iou_loss = 0.000000, total_loss = 4508.903320 
+ total_bbox = 136, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.417243, GIOU: 0.394824), Class: 0.408003, Obj: 0.602068, No Obj: 0.505864, .5R: 0.428571, .75R: 0.142857, count: 7, class_loss = 292.494171, iou_loss = 8.297455, total_loss = 300.791626 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.440188, GIOU: 0.380183), Class: 0.659564, Obj: 0.365010, No Obj: 0.508835, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1173.367188, iou_loss = 0.264038, total_loss = 1173.631226 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.499798, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4492.069824, iou_loss = 0.000000, total_loss = 4492.069824 
+ total_bbox = 144, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.424883, GIOU: 0.423998), Class: 0.667648, Obj: 0.643455, No Obj: 0.503302, .5R: 0.333333, .75R: 0.333333, count: 3, class_loss = 289.454376, iou_loss = 28.230591, total_loss = 317.684967 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.525607, GIOU: 0.464411), Class: 0.570127, Obj: 0.466720, No Obj: 0.509677, .5R: 0.500000, .75R: 0.000000, count: 2, class_loss = 1178.882202, iou_loss = 0.494873, total_loss = 1179.377075 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501353, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4524.021973, iou_loss = 0.000000, total_loss = 4524.021973 
+ total_bbox = 149, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.479642, GIOU: 0.303430), Class: 0.502289, Obj: 0.636714, No Obj: 0.502577, .5R: 0.600000, .75R: 0.200000, count: 5, class_loss = 288.242340, iou_loss = 8.104156, total_loss = 296.346497 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.103388, GIOU: 0.103387), Class: 0.662678, Obj: 0.522811, No Obj: 0.508885, .5R: 0.000000, .75R: 0.000000, count: 3, class_loss = 1174.295410, iou_loss = 8.742676, total_loss = 1183.038086 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500159, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4493.051270, iou_loss = 0.000000, total_loss = 4493.051270 
+ total_bbox = 157, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.479944, GIOU: 0.392315), Class: 0.565916, Obj: 0.620291, No Obj: 0.501375, .5R: 0.571429, .75R: 0.142857, count: 7, class_loss = 286.373596, iou_loss = 8.784515, total_loss = 295.158112 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.510543, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1178.370972, iou_loss = 0.000000, total_loss = 1178.370972 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500346, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4493.013672, iou_loss = 0.000000, total_loss = 4493.013672 
+ total_bbox = 164, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.474121, GIOU: 0.427231), Class: 0.557010, Obj: 0.549656, No Obj: 0.503467, .5R: 0.400000, .75R: 0.000000, count: 5, class_loss = 290.636658, iou_loss = 1.839172, total_loss = 292.475830 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.359657, GIOU: 0.304594), Class: 0.665166, Obj: 0.434428, No Obj: 0.510038, .5R: 0.250000, .75R: 0.000000, count: 4, class_loss = 1180.667358, iou_loss = 2.200928, total_loss = 1182.868286 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.502031, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4530.981934, iou_loss = 0.000000, total_loss = 4530.981934 
+ total_bbox = 173, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.410921, GIOU: 0.379874), Class: 0.503108, Obj: 0.627909, No Obj: 0.503897, .5R: 0.333333, .75R: 0.000000, count: 6, class_loss = 291.333832, iou_loss = 8.729950, total_loss = 300.063782 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.364401, GIOU: 0.281237), Class: 0.441889, Obj: 0.535722, No Obj: 0.508649, .5R: 0.500000, .75R: 0.000000, count: 2, class_loss = 1175.641968, iou_loss = 1.758789, total_loss = 1177.400757 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.502041, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4533.120605, iou_loss = 0.000000, total_loss = 4533.120605 
+ total_bbox = 181, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.326003, GIOU: 0.039598), Class: 0.666202, Obj: 0.562023, No Obj: 0.503595, .5R: 0.000000, .75R: 0.000000, count: 3, class_loss = 287.888428, iou_loss = 7.393616, total_loss = 295.282043 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.320765, GIOU: 0.248364), Class: 0.490931, Obj: 0.555425, No Obj: 0.509646, .5R: 0.000000, .75R: 0.000000, count: 2, class_loss = 1172.496338, iou_loss = 1.261597, total_loss = 1173.757935 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500007, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4484.691895, iou_loss = 0.000000, total_loss = 4484.691895 
+ total_bbox = 186, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.408627, GIOU: 0.339524), Class: 0.566795, Obj: 0.609172, No Obj: 0.504343, .5R: 0.375000, .75R: 0.125000, count: 8, class_loss = 289.453156, iou_loss = 12.334686, total_loss = 301.787842 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.509718, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1173.704346, iou_loss = 0.000000, total_loss = 1173.704346 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501337, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4517.134766, iou_loss = 0.000000, total_loss = 4517.134766 
+ total_bbox = 194, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.325600, GIOU: 0.300309), Class: 0.559608, Obj: 0.575514, No Obj: 0.502288, .5R: 0.000000, .75R: 0.000000, count: 6, class_loss = 288.607208, iou_loss = 7.749817, total_loss = 296.357025 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.492926, GIOU: 0.443806), Class: 0.539219, Obj: 0.558124, No Obj: 0.508837, .5R: 0.562500, .75R: 0.187500, count: 16, class_loss = 1175.806763, iou_loss = 8.772705, total_loss = 1184.579468 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501922, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4528.148438, iou_loss = 0.000000, total_loss = 4528.148438 
+ total_bbox = 216, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.501480, GIOU: 0.448160), Class: 0.530046, Obj: 0.526162, No Obj: 0.504276, .5R: 0.400000, .75R: 0.000000, count: 5, class_loss = 290.236572, iou_loss = 1.930450, total_loss = 292.167023 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.529565, GIOU: 0.482489), Class: 0.557251, Obj: 0.491613, No Obj: 0.509564, .5R: 0.500000, .75R: 0.000000, count: 4, class_loss = 1174.625366, iou_loss = 0.991211, total_loss = 1175.616577 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500065, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4486.658203, iou_loss = 0.000000, total_loss = 4486.658203 
+ total_bbox = 225, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.367184, GIOU: 0.268327), Class: 0.488413, Obj: 0.483558, No Obj: 0.504647, .5R: 0.272727, .75R: 0.000000, count: 11, class_loss = 293.214294, iou_loss = 12.537903, total_loss = 305.752197 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.520745, GIOU: 0.472542), Class: 0.588201, Obj: 0.505485, No Obj: 0.509613, .5R: 0.666667, .75R: 0.000000, count: 3, class_loss = 1179.518066, iou_loss = 0.728027, total_loss = 1180.246094 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501073, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4525.248535, iou_loss = 0.000000, total_loss = 4525.248535 
+ total_bbox = 239, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.673267, GIOU: 0.642455), Class: 0.565844, Obj: 0.486555, No Obj: 0.502248, .5R: 0.750000, .75R: 0.250000, count: 4, class_loss = 286.331451, iou_loss = 0.451324, total_loss = 286.782776 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.386305, GIOU: 0.343584), Class: 0.321578, Obj: 0.459733, No Obj: 0.508927, .5R: 0.333333, .75R: 0.000000, count: 3, class_loss = 1166.906372, iou_loss = 1.560913, total_loss = 1168.467285 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.499761, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4467.694336, iou_loss = 0.000000, total_loss = 4467.694336 
+ total_bbox = 246, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.553159, GIOU: 0.529599), Class: 0.360410, Obj: 0.503112, No Obj: 0.502921, .5R: 0.600000, .75R: 0.000000, count: 5, class_loss = 289.708344, iou_loss = 1.204712, total_loss = 290.913055 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.398913, GIOU: 0.196918), Class: 0.652357, Obj: 0.531813, No Obj: 0.510303, .5R: 0.250000, .75R: 0.000000, count: 4, class_loss = 1181.778320, iou_loss = 3.325928, total_loss = 1185.104248 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501541, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4524.367676, iou_loss = 0.000000, total_loss = 4524.367676 
+ total_bbox = 255, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.509611, GIOU: 0.495570), Class: 0.540267, Obj: 0.447518, No Obj: 0.502307, .5R: 0.571429, .75R: 0.142857, count: 7, class_loss = 288.084259, iou_loss = 20.804230, total_loss = 308.888489 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.462349, GIOU: 0.462350), Class: 0.481391, Obj: 0.511748, No Obj: 0.509798, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1175.645630, iou_loss = 0.288574, total_loss = 1175.934204 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501244, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4510.298828, iou_loss = 0.000000, total_loss = 4510.298828 
+ total_bbox = 263, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.271153, GIOU: 0.168474), Class: 0.600874, Obj: 0.498099, No Obj: 0.504444, .5R: 0.000000, .75R: 0.000000, count: 4, class_loss = 292.132050, iou_loss = 4.863098, total_loss = 296.995148 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.301298, GIOU: 0.201623), Class: 0.552330, Obj: 0.615113, No Obj: 0.508856, .5R: 0.000000, .75R: 0.000000, count: 5, class_loss = 1177.288452, iou_loss = 15.669189, total_loss = 1192.957642 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501275, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4530.756836, iou_loss = 0.000000, total_loss = 4530.756836 
+ total_bbox = 272, rewritten_bbox = 0.000000 % 
+Loaded: 0.000045 seconds
+
+ 2: 1995.337891, 1989.329102 avg loss, 0.000000 rate, 391.206854 seconds, 128 images, 54300.375162 hours left
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.466306, GIOU: 0.406539), Class: 0.511047, Obj: 0.542285, No Obj: 0.501761, .5R: 0.333333, .75R: 0.000000, count: 6, class_loss = 284.719147, iou_loss = 2.156464, total_loss = 286.875610 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.570863, GIOU: 0.570863), Class: 0.298847, Obj: 0.443735, No Obj: 0.508740, .5R: 1.000000, .75R: 0.000000, count: 1, class_loss = 1161.937012, iou_loss = 0.157837, total_loss = 1162.094849 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.498975, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4441.025879, iou_loss = 0.000000, total_loss = 4441.025879 
+ total_bbox = 279, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.424891, GIOU: 0.356006), Class: 0.518379, Obj: 0.454343, No Obj: 0.501421, .5R: 0.333333, .75R: 0.000000, count: 9, class_loss = 285.741333, iou_loss = 6.864746, total_loss = 292.606079 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.510285, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1170.840820, iou_loss = 0.000000, total_loss = 1170.840820 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.499075, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4455.041016, iou_loss = 0.000000, total_loss = 4455.041016 
+ total_bbox = 288, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.384177, GIOU: 0.326037), Class: 0.638891, Obj: 0.556372, No Obj: 0.501399, .5R: 0.333333, .75R: 0.000000, count: 6, class_loss = 285.886444, iou_loss = 12.615875, total_loss = 298.502319 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.407279, GIOU: 0.357690), Class: 0.580937, Obj: 0.435715, No Obj: 0.509720, .5R: 0.000000, .75R: 0.000000, count: 3, class_loss = 1172.589111, iou_loss = 1.229736, total_loss = 1173.818848 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.499213, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4469.934082, iou_loss = 0.000000, total_loss = 4469.934082 
+ total_bbox = 297, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.437457, GIOU: 0.412486), Class: 0.508040, Obj: 0.557265, No Obj: 0.504375, .5R: 0.285714, .75R: 0.142857, count: 7, class_loss = 291.772064, iou_loss = 10.200104, total_loss = 301.972168 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.271761, GIOU: 0.271761), Class: 0.545180, Obj: 0.532121, No Obj: 0.509500, .5R: 0.250000, .75R: 0.000000, count: 4, class_loss = 1177.732300, iou_loss = 3.393799, total_loss = 1181.126099 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501880, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4532.014160, iou_loss = 0.000000, total_loss = 4532.014160 
+ total_bbox = 308, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.528421, GIOU: 0.484230), Class: 0.565813, Obj: 0.569133, No Obj: 0.501615, .5R: 0.555556, .75R: 0.111111, count: 9, class_loss = 286.873077, iou_loss = 21.796814, total_loss = 308.669891 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.426707, GIOU: 0.296001), Class: 0.481175, Obj: 0.449883, No Obj: 0.510366, .5R: 0.333333, .75R: 0.000000, count: 3, class_loss = 1177.949829, iou_loss = 1.265137, total_loss = 1179.214966 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.409856, GIOU: 0.409856), Class: 0.686547, Obj: 0.542349, No Obj: 0.499624, .5R: 0.500000, .75R: 0.000000, count: 2, class_loss = 4481.427734, iou_loss = 1.014160, total_loss = 4482.441895 
+ total_bbox = 322, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.504593, GIOU: 0.466716), Class: 0.343649, Obj: 0.656496, No Obj: 0.502390, .5R: 0.600000, .75R: 0.200000, count: 5, class_loss = 286.189453, iou_loss = 18.076752, total_loss = 304.266205 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.414821, GIOU: 0.412986), Class: 0.665521, Obj: 0.620345, No Obj: 0.509436, .5R: 0.250000, .75R: 0.000000, count: 4, class_loss = 1167.715698, iou_loss = 2.215820, total_loss = 1169.931519 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.499605, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4467.771973, iou_loss = 0.000000, total_loss = 4467.771973 
+ total_bbox = 331, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.278376, GIOU: 0.205765), Class: 0.566412, Obj: 0.590069, No Obj: 0.503694, .5R: 0.200000, .75R: 0.000000, count: 5, class_loss = 290.114685, iou_loss = 3.871948, total_loss = 293.986633 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.390596, GIOU: 0.190338), Class: 0.618142, Obj: 0.564289, No Obj: 0.510437, .5R: 0.250000, .75R: 0.250000, count: 4, class_loss = 1178.942749, iou_loss = 3.411011, total_loss = 1182.353760 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500464, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4505.289551, iou_loss = 0.000000, total_loss = 4505.289551 
+ total_bbox = 340, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.442542, GIOU: 0.334600), Class: 0.559463, Obj: 0.566561, No Obj: 0.501411, .5R: 0.500000, .75R: 0.000000, count: 8, class_loss = 284.217102, iou_loss = 12.549774, total_loss = 296.766876 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.526374, GIOU: 0.512424), Class: 0.551230, Obj: 0.512370, No Obj: 0.509206, .5R: 1.000000, .75R: 0.000000, count: 1, class_loss = 1163.630615, iou_loss = 0.288818, total_loss = 1163.919434 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.499218, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4451.102539, iou_loss = 0.000000, total_loss = 4451.102539 
+ total_bbox = 349, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.552125, GIOU: 0.383586), Class: 0.613984, Obj: 0.606245, No Obj: 0.503733, .5R: 0.800000, .75R: 0.200000, count: 5, class_loss = 288.131866, iou_loss = 7.133545, total_loss = 295.265411 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.245383, GIOU: -0.076819), Class: 0.538507, Obj: 0.395360, No Obj: 0.510789, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1176.809204, iou_loss = 1.000488, total_loss = 1177.809692 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500316, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4485.748535, iou_loss = 0.000000, total_loss = 4485.748535 
+ total_bbox = 355, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.518609, GIOU: 0.448880), Class: 0.545358, Obj: 0.532885, No Obj: 0.504215, .5R: 0.571429, .75R: 0.142857, count: 7, class_loss = 290.782623, iou_loss = 2.145630, total_loss = 292.928253 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.181044, GIOU: 0.103896), Class: 0.690766, Obj: 0.662476, No Obj: 0.507704, .5R: 0.000000, .75R: 0.000000, count: 2, class_loss = 1167.885254, iou_loss = 16.096924, total_loss = 1183.982178 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500941, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4504.065430, iou_loss = 0.000000, total_loss = 4504.065430 
+ total_bbox = 364, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.139219, GIOU: 0.129215), Class: 0.345660, Obj: 0.729143, No Obj: 0.501214, .5R: 0.000000, .75R: 0.000000, count: 2, class_loss = 287.672485, iou_loss = 13.100433, total_loss = 300.772919 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.140486, GIOU: 0.140486), Class: 0.429992, Obj: 0.618803, No Obj: 0.510496, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1181.804077, iou_loss = 1.250854, total_loss = 1183.054932 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.501684, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4526.535645, iou_loss = 0.000000, total_loss = 4526.535645 
+ total_bbox = 367, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.389327, GIOU: 0.108325), Class: 0.637865, Obj: 0.531452, No Obj: 0.503814, .5R: 0.500000, .75R: 0.000000, count: 6, class_loss = 290.546021, iou_loss = 11.834534, total_loss = 302.380554 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.508387, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1170.888428, iou_loss = 0.000000, total_loss = 1170.888428 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.500553, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4498.187500, iou_loss = 0.000000, total_loss = 4498.187500 
+ total_bbox = 373, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.445269, GIOU: 0.407533), Class: 0.557289, Obj: 0.595824, No Obj: 0.505610, .5R: 0.625000, .75R: 0.000000, count: 8, class_loss = 293.280792, iou_loss = 5.482635, total_loss = 298.763428 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.311778, GIOU: 0.284773), Class: 0.870033, Obj: 0.572324, No Obj: 0.509254, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1180.292480, iou_loss = 0.822632, total_loss = 1181.115112 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.311395, GIOU: 0.252893), Class: 0.552580, Obj: 0.570074, No Obj: 0.501210, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4532.013184, iou_loss = 0.441895, total_loss = 4532.455078 
+ total_bbox = 383, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.528533, GIOU: 0.480858), Class: 0.569594, Obj: 0.574565, No Obj: 0.503949, .5R: 0.400000, .75R: 0.000000, count: 5, class_loss = 290.128906, iou_loss = 1.153625, total_loss = 291.282532 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.511381, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1183.812866, iou_loss = 0.000000, total_loss = 1183.812866 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.502311, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4534.613281, iou_loss = 0.000000, total_loss = 4534.613281 
+ total_bbox = 388, rewritten_bbox = 0.000000 % 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 82 Avg (IOU: 0.476736, GIOU: 0.458481), Class: 0.514791, Obj: 0.631951, No Obj: 0.502127, .5R: 0.600000, .75R: 0.000000, count: 5, class_loss = 285.941956, iou_loss = 28.902771, total_loss = 314.844727 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 94 Avg (IOU: 0.000000, GIOU: 0.000000), Class: 0.000000, Obj: 0.000000, No Obj: 0.510216, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 1172.571533, iou_loss = 0.000000, total_loss = 1172.571533 
+v3 (mse loss, Normalizer: (iou: 0.75, cls: 1.00) Region 106 Avg (IOU: 0.483348, GIOU: 0.462586), Class: 0.551632, Obj: 0.478488, No Obj: 0.499606, .5R: 0.000000, .75R: 0.000000, count: 1, class_loss = 4464.699219, iou_loss = 0.291504, total_loss = 4464.990723 
+ total_bbox = 394, rewritten_bbox = 0.000000 % 
