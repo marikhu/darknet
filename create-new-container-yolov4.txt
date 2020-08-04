@@ -1,0 +1,1 @@
+docker run -v /home/marikhu:/marikhu --name marikhuyolov4 --runtime=nvidia -t -i pvsco/analytic:yolov4-trainner
