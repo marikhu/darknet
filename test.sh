@@ -1,0 +1,1 @@
+./darknet detector test VehicleDetect-Yolo-DMT-front-night-rain.data VehicleDetect-Yolo-DMT-front-night-rain-7GPUs.cfg VehicleDetect-Yolo-DMT-front-night-rain_best_16Sept20.weights data_VehicleDetect-DMT-front-night-rain/DMT-rain-2020-05-07-15h00m49s715_hflip.jpg
