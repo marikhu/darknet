@@ -1,0 +1,5 @@
+classes= 2
+train  = /marikhu/YOLOv4/darknet/VehicleDetect-Yolo-DMT-front-night-rain-train.txt
+names = /marikhu/YOLOv4/darknet/VehicleDetect-Yolo-DMT-front-night-rain.names
+backup = models_VehicleDetect-Yolo-DMT-front-night-rain
+
